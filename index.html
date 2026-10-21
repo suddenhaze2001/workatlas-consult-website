@@ -504,6 +504,94 @@ body{overflow-x:hidden}
 
 </style>
 
+<style>
+
+/* WorkAtlas homepage hero cards — improved mobile layout */
+@media (max-width: 760px) {
+  .hero { padding: 38px 0 34px !important; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; }
+  .hero-visual {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    gap: 12px !important;
+    width: 100%;
+    min-width: 0;
+    padding: 0 0 8px !important;
+  }
+  .hero-visual .visual-main,
+  .hero-visual .mini-card,
+  .hero-visual .mini-card.bottom {
+    grid-column: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    inset: auto !important;
+    transform: none;
+    overflow: hidden;
+    border-radius: 16px !important;
+    box-sizing: border-box;
+  }
+  .hero-visual .visual-main {
+    grid-row: 1 !important;
+    min-height: 205px !important;
+    padding: 22px !important;
+    gap: 22px;
+  }
+  .hero-visual .visual-main h3 {
+    font-size: clamp(1.35rem, 6vw, 1.8rem) !important;
+    line-height: 1.2 !important;
+    max-width: 18ch;
+    overflow-wrap: anywhere;
+  }
+  .hero-visual .visual-main p {
+    font-size: .9rem !important;
+    line-height: 1.55 !important;
+    max-width: 34ch;
+  }
+  .hero-visual .mini-card {
+    grid-row: 2 !important;
+    padding: 17px 18px !important;
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 4px;
+  }
+  .hero-visual .mini-card .mini-label,
+  .hero-visual .mini-card .mini-number,
+  .hero-visual .mini-card p {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .hero-visual .mini-card .mini-label { grid-column: 1 / -1; font-size: .72rem !important; }
+  .hero-visual .mini-card .mini-number { font-size: 1.1rem !important; line-height: 1.25; }
+  .hero-visual .mini-card p { font-size: .78rem !important; line-height: 1.45 !important; }
+  .hero-visual .mini-card .mini-bars { grid-column: 2; grid-row: 2 / span 2; }
+  .hero-visual .mini-card.bottom {
+    grid-row: 3 !important;
+    padding: 17px 18px !important;
+    min-height: 0 !important;
+    display: block !important;
+  }
+  .hero-visual .mini-card.bottom strong {
+    display: block;
+    font-size: .95rem !important;
+    line-height: 1.45 !important;
+    overflow-wrap: anywhere;
+  }
+  .hero-visual .mini-card,
+  .hero-visual .mini-card.bottom { animation: none !important; }
+}
+@media (max-width: 380px) {
+  .hero-visual .visual-main { padding: 19px !important; min-height: 190px !important; }
+  .hero-visual .mini-card,
+  .hero-visual .mini-card.bottom { padding: 15px !important; }
+  .hero-visual .mini-card .mini-bars { display: none; }
+}
+</style>
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
